@@ -11,5 +11,25 @@
         <script src="index.js">
             nnerText
         </script>
+        <div class="container">
+            <div>
+                <div id="name-box">
+                    <h3>Player 1</h3>
+                </div>
+                <h2 id="home-score">0</h2>
+                <button id="home-score-btn-1" onclick="increaseHomeScoreOne()">+ 1</button>
+                <button id="home-score-btn-2" onclick="increaseHomeScoreTwo()">+ 0.5</button>
+            </div>
+            <div>
+                <div id="name-box">
+                    <h3>Player 2</h3>
+                </div>
+                <h2 id="away-score">0</h2>
+                <button id="away-score-btn-1" onclick="increaseAwayScoreOne()">+ 1</button>
+                <button id="away-score-btn-2" onclick="increaseAwayScoreTwo()">+ 0.5</button>
+            </div>
+        </div>
+        <button id="reset" onclick="resetScore()">NEW GAME</button>
+        <script src="index.js"></script>
     </body>
 </html>

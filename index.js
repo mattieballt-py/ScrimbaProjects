@@ -14,35 +14,46 @@ function save() {
     count = 0
 }
 
-let homeScoreBtnOne = document.getElementById("home-score-btn-1")
-let homeStoreEl =document.getElementById("home-score")
-let homeScore = 0
+let homeScore = 0;
+let awayScore = 0;
+let homeStoreEl, awayStoreEl;
 
-function increaseHomeScoreOne(){
-    homeScore += 1
-    homeStoreEl.textContent = homeScore
-}
-function increaseHomeScoreTwo(){
-    homeScore += 0.5
-    homeStoreEl.textContent = homeScore
-}
+window.addEventListener('DOMContentLoaded', function() {
+    homeStoreEl = document.getElementById("home-score");
+    awayStoreEl = document.getElementById("away-score");
+    homeStoreEl.textContent = homeScore;
+    awayStoreEl.textContent = awayScore;
+});
 
-let awayScoreBtnOne = document.getElementById("away-score-btn-1")
-let awayStoreEl =document.getElementById("away-score")
-let awayScore = 0
-
-function increaseAwayScoreOne(){
-    awayScore += 1
-    awayStoreEl.textContent = awayScore
-}
-function increaseAwayScoreTwo(){
-    awayScore += 0.5
-    awayStoreEl.textContent = awayScore
+function increaseHomeScoreOne() {
+    homeScore += 1;
+    if (!homeStoreEl) homeStoreEl = document.getElementById("home-score");
+    homeStoreEl.textContent = homeScore;
 }
 
-function resetScore(){
-    awayScore = 0
-    awayStoreEl.textContent = awayScore
-    homeScore = 0
-    homeStoreEl.textContent = homeScore
+function increaseHomeScoreTwo() {
+    homeScore += 0.5;
+    if (!homeStoreEl) homeStoreEl = document.getElementById("home-score");
+    homeStoreEl.textContent = homeScore;
+}
+
+function increaseAwayScoreOne() {
+    awayScore += 1;
+    if (!awayStoreEl) awayStoreEl = document.getElementById("away-score");
+    awayStoreEl.textContent = awayScore;
+}
+
+function increaseAwayScoreTwo() {
+    awayScore += 0.5;
+    if (!awayStoreEl) awayStoreEl = document.getElementById("away-score");
+    awayStoreEl.textContent = awayScore;
+}
+
+function resetScore() {
+    homeScore = 0;
+    awayScore = 0;
+    if (!homeStoreEl) homeStoreEl = document.getElementById("home-score");
+    if (!awayStoreEl) awayStoreEl = document.getElementById("away-score");
+    homeStoreEl.textContent = homeScore;
+    awayStoreEl.textContent = awayScore;
 }

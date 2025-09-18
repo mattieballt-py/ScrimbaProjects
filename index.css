@@ -15,11 +15,11 @@ h2 {
     margin-bottom: 20px;
 }
 
-button {
+button.inc {
     border: none;
     padding-top: 10px;
     padding-bottom: 10px;
-    color: white;
+    color: rgb(9, 9, 9);
     font-weight: bold;
     width: 200px;
     margin-bottom: 5px;
@@ -44,9 +44,11 @@ body {
     justify-content: space-around;
 }
 
-button {
+button.add {
     background-color: white;
     border-radius: 4px;
+    max-width: fit-content;
+    border-color: brown;
 }
 
 h3 {
